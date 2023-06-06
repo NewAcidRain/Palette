@@ -1,0 +1,50 @@
+.modal-fader.active {
+    display: block;
+}
+
+.main__modal-window {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 324px;
+    height: 280px;
+    background: #333333;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #1A1A1A;
+    font-family: sans-serif;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+}
+.main__modal-window.active {
+    display: flex;
+}
+
+.modal-1{
+    width: 324px;
+    height: 280px;
+}
+
+.modal-2{
+    width: 324px;
+    height: 310px;
+}
+
+.modal-3{
+    width: 324px;
+    height: 516px;
+}
+
+.input-color{
+    background: #2B2B2B;
+    width: 345px;
+    height: 42px;
+    border: 1px solid #1A1A1A;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-indent: 12px;
+}

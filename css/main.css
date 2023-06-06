@@ -1,0 +1,37 @@
+@import url("../font/stylesheet.css");
+
+
+
+.main__btn{
+    background: #595959;
+    color:  #ffffff;
+    border: 1px solid #1A1A1A;
+    border-radius: 8px;
+    width: 137px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+.main__btn:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background: #595959;
+    color: #ffffff;
+}
+
+.main__btn:active
+{
+    box-shadow: 0px 5px 10px 0px rgba(143, 229, 57, 1);
+    background: #333333;
+    color: #8FE539;
+}
+.main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}

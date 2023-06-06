@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customize Instagram Feed</title>
+    <style>
+        .pallit{
+            width:15px;height:15px;
+        }
+
+    </style>
+</head>
+<body>
+<input type="text" class="BGW" id="colorMInput">
+<button onclick="deleteColor()">delete</button>
+<div id="colorPicker">
+    <div id="cost"></div>
+    <label for="colorInput">
+        <svg class="svg-color" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="currentColor" stroke="currentColor"/>
+        </svg>
+        <input type="color" style="display: none" id="colorInput" onchange="chch()">
+    </label>
+</div>
+<script>
+
+    function chch(){
+        const col = document.getElementById('colorInput').value;
+        const svg = document.getElementsByClassName('svg-color')
+        document.getElementById('colorMInput').value = col;
+        if(document.getElementById(col) == null ){
+            if(document.getElementsByClassName('pallit').length < 21){
+                svg[0].id = col;
+                svg[0].addEventListener('click', function handleClick(event) {
+                    document.getElementById('colorMInput').value = svg[0].id;
+                });
+                svg[0].style.cssText = 'fill:' + col + ';color:' + col + ';';
+            }
+        }
+    }
+
+    function deleteColor()
+    {
+        let col = document.getElementById('colorMInput');
+        let colorCount = document.querySelectorAll('.pallit')
+        for(let i=0; i<colorCount.length; i++)
+        {
+            if(colorCount[i].id === col.value)
+            {
+                let color = document.getElementById(colorCount[i].id)
+                color.remove()
+            }
+        }
+    }
+</script>
+</body>
